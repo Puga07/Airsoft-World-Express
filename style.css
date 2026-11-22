@@ -1,0 +1,420 @@
+/* Configuração Global - Fundo Escuro e Texto Claro */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f1115; /* Chumbo profundo */
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho Vibrante */
+header {
+    background-color: #1a1d24;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #FF6600; /* Laranja Tático */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #FF6600;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* Menu e Barra de Busca */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #14161a;
+    padding: 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    color: #FF6600;
+    border-bottom: 2px solid #FF6600;
+}
+
+/* Vitrine e Cards */
+.vitrine {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+.produto {
+    background-color: #1a1d24;
+    padding: 20px;
+    border-radius: 6px;
+    width: 280px;
+    border: 1px solid #2a2d35;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    transition: transform 0.2s; /* Animação simples ao passar o mouse */
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    border-color: #FF6600;
+}
+
+.produto h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.preco {
+    color: #FF6600;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+/* As Barras de Status (Estilo Call of Duty) */
+.status-container {
+    margin: 15px 0;
+}
+
+.status-row {
+    margin-bottom: 8px;
+}
+
+.status-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #aaaaaa;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.status-bar-bg {
+    background-color: #2a2d35;
+    height: 8px;
+    border-radius: 4px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.status-bar-fill {
+    background-color: #00E676; /* Verde Neon para contraste */
+    height: 100%;
+}
+
+/* Botões */
+.btn-gunsmith {
+    background-color: transparent;
+    color: #FF6600;
+    border: 2px solid #FF6600;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.btn-gunsmith:hover {
+    background-color: #FF6600;
+    color: #14161a;
+}
+
+/* Modal Gunsmith (Oculto por padrão) */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Fundo bem escuro */
+    display: none; /* Só aparece quando o JS mandar */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #1a1d24;
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid #FF6600;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 102, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 2rem;
+    color: #aaaaaa;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: #FF6600;
+}
+
+.acessorios-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.acessorio-item {
+    background-color: #14161a;
+    padding: 15px;
+    border: 1px solid #2a2d35;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.acessorio-item:hover {
+    border-color: #FF6600;
+}
+
+/* Imagens na Vitrine */
+.img-vitrine {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border: 1px solid #2a2d35;
+    transition: border-color 0.3s;
+}
+
+.img-vitrine:hover {
+    border-color: #FF6600;
+}
+
+/* Novo Layout do Modal Expandido (Gunsmith) */
+.modal-content.expandido {
+    max-width: 800px; /* Deixamos a janela bem mais larga */
+}
+
+.modal-layout {
+    display: flex;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+/* Coluna da Foto e Descrição */
+.modal-left {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.img-modal-ampliada {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #2a2d35;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.desc-arma {
+    background-color: #14161a;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    line-height: 1.5;
+    border-left: 4px solid #FF6600;
+}
+
+/* Coluna das Estatísticas e Acessórios */
+.modal-right {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para a Barra Comparativa de Status */
+.status-bar-bg {
+    position: relative; /* Necessário para alinhar as camadas */
+    background-color: #2a2d35;
+    height: 8px;
+    border-radius: 4px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* A barra fantasma que marca o valor ORIGINAL (antigo) */
+.status-bar-original {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.25); /* Branco transparente */
+    z-index: 1;
+}
+
+/* A barra do status atual (que cresce) */
+.status-bar-fill {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    background-color: #00E676;
+    z-index: 2;
+}
+
+/* --- TELA DE LOGIN E HISTÓRIA --- */
+.login-container {
+    max-width: 400px;
+    margin: 60px auto;
+    background-color: #1a1d24;
+    padding: 40px;
+    border-radius: 8px;
+    border-top: 5px solid #FF6600;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    text-align: center;
+}
+
+.input-tatico {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0 20px 0;
+    background-color: #0f1115;
+    border: 1px solid #2a2d35;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.input-tatico:focus {
+    border-color: #FF6600;
+    outline: none;
+}
+
+.history-container {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #1a1d24;
+    padding: 50px;
+    border-radius: 8px;
+    border-left: 5px solid #FF6600;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    display: none; /* Começa escondido, o JS vai revelar */
+    text-align: left;
+    line-height: 1.8;
+}
+
+.history-container h2 {
+    color: #FF6600;
+    margin-top: 0;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+.btn-gigante {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #FF6600;
+    color: #0f1115;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 40px;
+    transition: 0.3s;
+}
+
+.btn-gigante:hover {
+    background-color: #00E676;
+    color: #0f1115;
+}
+
+/* Barra de Filtros do Catálogo */
+.filtro-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0 10px 0;
+}
+
+.btn-filtro {
+    background-color: #1a1d24;
+    color: #e0e0e0;
+    border: 1px solid #2a2d35;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+.btn-filtro:hover {
+    border-color: #FF6600;
+    color: #FF6600;
+}
+
+/* Botão ativo quando selecionado */
+.btn-filtro.ativo {
+    background-color: #FF6600;
+    color: #0f1115;
+    border-color: #FF6600;
+}
+
+/* --- MOLDURAS DAS ARMAS (PARA IMAGENS PNG TRANSPARENTES) --- */
+.img-container {
+    background-color: transparent; 
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    height: 160px; /* Trava a altura para os cards ficarem perfeitamente alinhados */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.img-container:hover {
+    border-color: #FF6600; /* Borda laranja ao passar o mouse */
+}
+
+.img-vitrine {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Impede que a foto estique ou deforme */
+    border: none;
+}
+
+.img-modal-ampliada {
+    width: 100%;
+    height: 250px;
+    background-color: transparent; 
+    border-radius: 8px;
+    border: 2px solid #2a2d35;
+    padding: 15px;
+    object-fit: contain;
+}

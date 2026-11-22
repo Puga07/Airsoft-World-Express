@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airsoft World Express | Catálogo de Arsenal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Airsoft World Express</h1>
+        <p>Equipamentos Táticos e Simulacros</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="produtos.html" style="color: #FF6600; border-bottom: 2px solid #FF6600;">Catálogo</a>
+        <a href="contato.html">Suporte Técnico</a>
+    </nav>
+
+    <main>
+        <h2>Nosso Arsenal Completo</h2>
+        <p>Explore as categorias de armamento, proteção e suprimentos táticos.</p>
+        
+        <!-- BARRA DE FILTROS -->
+        <div class="filtro-container">
+            <button class="btn-filtro ativo" onclick="filtrar('todos', this)">Todos</button>
+            <button class="btn-filtro" onclick="filtrar('rifles', this)">Rifles (AEG/Sniper)</button>
+            <button class="btn-filtro" onclick="filtrar('pistolas', this)">Pistolas (GBB)</button>
+            <button class="btn-filtro" onclick="filtrar('protecao', this)">Proteção & Coletes</button>
+            <button class="btn-filtro" onclick="filtrar('municao', this)">Munição (BBs)</button>
+        </div>
+
+        <!-- VITRINE DE PRODUTOS -->
+        <section class="vitrine">
+            
+            <!-- Rifle M4A1 -->
+            <div class="produto" data-categoria="rifles">
+                <h3>Rifle M4A1</h3>
+                <div class="img-container" onclick="abrirGunsmith('m4a1')">
+                    <img src="./img/m4a1.png" alt="Rifle M4A1" class="img-vitrine">
+                </div>
+                <p style="font-size: 0.9rem; color: #888;">Elétrica (AEG) - Bivolt</p>
+                <p class="preco">R$ 1.500,00</p>
+                <button class="btn-gunsmith" onclick="abrirGunsmith('m4a1')">Abrir Gunsmith</button>
+            </div>
+
+            <!-- Pistola Glock G17 -->
+            <div class="produto" data-categoria="pistolas">
+                <h3>Pistola Glock G17</h3>
+                <div class="img-container" onclick="abrirGunsmith('g17')">
+                    <img src="img\glock17.png" alt="Pistola Glock G17" class="img-vitrine">
+                </div>
+                <p style="font-size: 0.9rem; color: #888;">Green Gas - Blowback</p>
+                <p class="preco">R$ 850,00</p>
+                <button class="btn-gunsmith" onclick="abrirGunsmith('g17')">Abrir Gunsmith</button>
+            </div>
+
+            <!-- Colete Tático -->
+            <div class="produto" data-categoria="protecao">
+                <h3>Colete Tático Plate Carrier</h3>
+                <p style="font-size: 0.9rem; color: #888; margin-top: 15px;">Sistema Molle modular - Preto.</p>
+                <p class="preco" style="margin-top: 45px;">R$ 320,00</p>
+                <button class="btn-gunsmith" style="border-color: #555; color: #aaa;">Ver Detalhes</button>
+            </div>
+
+            <!-- Sniper L96 -->
+            <div class="produto" data-categoria="rifles">
+                <h3>Sniper L96</h3>
+                <div class="img-container" onclick="abrirGunsmith('L96')">
+                    <img src="./img/sniper_L96.png" alt="Sniper L96" class="img-vitrine">
+                </div>
+                <p style="font-size: 0.9rem; color: #888; margin-top: 15px;">Ação por mola (Spring) c/ Luneta.</p>
+                <p class="preco" style="margin-top: 45px;">R$ 2.500,00</p>
+                <button class="btn-gunsmith" onclick="abrirGunsmith('L96')">Abrir Gunsmith</button>
+            </div>
+
+            <!-- Capacete FAST -->
+            <div class="produto" data-categoria="protecao">
+                <h3>Capacete FAST</h3>
+                <p style="font-size: 0.9rem; color: #888; margin-top: 15px;">Trilhos laterais e suporte NVG.</p>
+                <p class="preco" style="margin-top: 45px;">R$ 250,00</p>
+                <button class="btn-gunsmith" style="border-color: #555; color: #aaa;">Ver Detalhes</button>
+            </div>
+
+            <!-- BBS -->
+            <div class="produto" data-categoria="municao">
+                <h3>BBS 0.20g (4000 un)</h3>
+                <p style="font-size: 0.9rem; color: #888; margin-top: 15px;">Munição de alta precisão.</p>
+                <p class="preco" style="margin-top: 45px;">R$ 85,00</p>
+                <button class="btn-gunsmith" style="border-color: #555; color: #aaa;">Ver Detalhes</button>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- MODAL DO GUNSMITH (Universal para o Catálogo) -->
+    <div id="gunsmith-modal" class="modal-overlay">
+        <div class="modal-content expandido">
+            <span class="close-btn" onclick="fecharGunsmith()">&times;</span>
+            <h2 style="margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px;">Gunsmith: <span id="modal-titulo-arma" style="color: #FF6600;">-</span></h2>
+            
+            <div class="modal-layout">
+                <div class="modal-left">
+                    <img id="modal-img-arma" src="" alt="Arma Detalhada" class="img-modal-ampliada">
+                    <div id="modal-desc-arma" class="desc-arma"></div>
+                </div>
+
+                <div class="modal-right">
+                    <div class="status-container" id="modal-stats" style="margin-top: 0;">
+                        <div class="status-row">
+                            <div class="status-label">
+                                <span id="lbl-stat1">-</span> 
+                                <div>
+                                    <span id="txt-stat1">-</span> 
+                                    <span id="comparativo-alcance" style="color: #FF6600; font-size: 0.75rem;"></span>
+                                </div>
+                            </div>
+                            <div class="status-bar-bg">
+                                <div id="bar-orig1" class="status-bar-original"></div>
+                                <div id="bar-fill1" class="status-bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="status-row">
+                            <div class="status-label"><span id="lbl-stat2">-</span> <span id="txt-stat2">-</span></div>
+                            <div class="status-bar-bg">
+                                <div id="bar-orig2" class="status-bar-original"></div>
+                                <div id="bar-fill2" class="status-bar-fill"></div>
+                            </div>
+                        </div>
+                        <div class="status-row">
+                            <div class="status-label"><span id="lbl-stat3">-</span> <span id="txt-stat3">-</span></div>
+                            <div class="status-bar-bg">
+                                <div id="bar-orig3" class="status-bar-original"></div>
+                                <div id="bar-fill3" class="status-bar-fill" style="background-color: #FF6600;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="color: #ffffff; margin-bottom: 10px;">Acessórios Táticos</h4>
+                    <div class="acessorios-lista" style="margin-top: 0;">
+                        <label class="acessorio-item">
+                            <input type="checkbox" id="check-acc1" onchange="atualizarArma()">
+                            <span id="text-acc1">-</span>
+                        </label>
+                        <label class="acessorio-item">
+                            <input type="checkbox" id="check-acc2" onchange="atualizarArma()">
+                            <span id="text-acc2">-</span>
+                        </label>
+                    </div>
+
+                    <div class="modal-footer" style="margin-top: auto; text-align: right; border-top: 1px solid #333; padding-top: 20px;">
+                        <h3 style="margin: 0 0 15px 0;">Total: <span id="modal-preco">R$ 0,00</span></h3>
+                        <button class="btn-gunsmith" style="width: 100%;" onclick="adicionarAoCarrinho()">Confirmar Modificações e Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Airsoft World Express. Projeto Disciplinar de Extensão.</p>
+    </footer>
+
+    <!-- SCRIPT DE FILTRAGEM E INTEGRAÇÃO DO GUNSMITH -->
+    <script src="./js/script.js"></script>
+    <script>
+        function filtrar(categoria, elementoBotao) {
+            const botoes = document.querySelectorAll('.btn-filtro');
+            botoes.forEach(btn => btn.classList.remove('ativo'));
+            elementoBotao.classList.add('ativo');
+
+            const produtos = document.querySelectorAll('.produto');
+            produtos.forEach(produto => {
+                const catProduto = produto.getAttribute('data-categoria');
+                if (categoria === 'todos' || catProduto === categoria) {
+                    produto.style.display = 'block';
+                } else {
+                    produto.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

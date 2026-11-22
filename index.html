@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airsoft World Express | Acesso Restrito</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Airsoft World Express</h1>
+        <p>Gunsmith & Equipamentos Táticos</p>
+    </header>
+
+    <main>
+        <!-- TELA 1: LOGIN -->
+        <div id="tela-login" class="login-container">
+            <h2 style="color: #fff; margin-bottom: 30px;">ACESSO AO ARSENAL</h2>
+            
+            <form onsubmit="realizarLogin(event)">
+                <div style="text-align: left;">
+                    <label style="color: #aaa; font-weight: bold;">E-mail Operacional</label>
+                    <input type="email" class="input-tatico" placeholder="operador@esquadrao.com" required>
+                </div>
+                
+                <div style="text-align: left;">
+                    <label style="color: #aaa; font-weight: bold;">Senha de Acesso</label>
+                    <input type="password" class="input-tatico" placeholder="••••••••" required>
+                </div>
+                
+                <button type="submit" class="btn-gunsmith" style="background-color: #FF6600; color: #000; font-size: 1.2rem; padding: 15px;">Autenticar Credenciais</button>
+            </form>
+            <p style="color: #777; margin-top: 20px; font-size: 0.8rem;">Não possui registro? <a href="#" style="color: #FF6600;">Aliste-se aqui</a>.</p>
+        </div>
+
+        <!-- TELA 2: HISTÓRIA (Escondida inicialmente) -->
+        <div id="tela-historia" class="history-container">
+            <h2>Nossa Missão e História</h2>
+            
+            <p style="color: #e0e0e0; font-size: 1.1rem;">
+                Fundada por operadores entusiastas, a <strong>Airsoft World Express</strong> nasceu com um único objetivo: fornecer equipamentos de altíssima fidelidade e performance para a comunidade tática do Brasil.
+            </p>
+            
+            <p style="color: #aaa;">
+                Nossa especialização vai muito além da simples revenda. Somos especialistas em sistemas AEG, GBB e Spring, oferecendo não apenas simulacros, mas uma plataforma completa de customização através do nosso exclusivo sistema <em>Gunsmith</em>. Avaliamos métricas reais de alcance, cadência e durabilidade para que você tenha a vantagem tática absoluta em campo.
+            </p>
+
+            <p style="color: #aaa;">
+                Seja para combates confinados em CQB ou engajamentos a longa distância, nosso arsenal é rigorosamente selecionado. Você está prestes a entrar em um catálogo restrito, contendo armamentos categorizados para cada tipo de operador.
+            </p>
+
+            <!-- Este é o botão que vai levar para o catálogo de verdade -->
+            <a href="produtos.html" class="btn-gigante">Ver Catálogo Completo ➔</a>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
