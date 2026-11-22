@@ -1,17 +1,17 @@
-// --- SISTEMA DE LOGIN SIMULADO ---
+
 function realizarLogin(event) {
-    // Impede a página de recarregar
+    
     event.preventDefault(); 
     
-    // Esconde a tela de login
+    
     document.getElementById('tela-login').style.display = 'none';
     
-    // Revela a história da empresa e o botão do catálogo
+    
     document.getElementById('tela-historia').style.display = 'block';
 }
 
 
-// --- SISTEMA GUNSMITH E MÉTRICAS (M4A1, Glock e Sniper L96) ---
+
 let armaAtual = ''; 
 let precoBase = 0;
 let alcanceBase = 0;
@@ -41,7 +41,7 @@ function abrirGunsmith(idArma) {
     avisoComparativo.innerText = "";
     barFill1.style.backgroundColor = "#00E676";
 
-    // Lógica condicional para cada arma do arsenal
+    
     if (idArma === 'm4a1') {
         titulo.innerText = "Rifle M4A1";
         imagem.src = "./img/m4a1.png";
