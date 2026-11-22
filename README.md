@@ -12,7 +12,7 @@
 ## Tecnologias utilizadas:
 - **HTML, CSS:** Estrutura semântica e layout responsivo.
 - **JavaScript:** Interatividade e manipulação do DOM.
-- **GitHup:** Hospedagem do repositório.
+- **GitHub:** Hospedagem do repositório.
 - **VS Code:** Editor de código.
 - **Gemini:** Apoio na geração de trechos de código e revisão.
 
