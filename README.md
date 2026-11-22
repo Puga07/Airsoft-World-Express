@@ -20,6 +20,7 @@
 - **Baixe os arquivos:** Clique no botão verde **<> Code** no topo desta página e selecione **Download ZIP**.
 - **Extraia a pasta:** Descompacte o arquivo baixado no seu computador.
 - **Abra o site:** Dê um duplo clique no arquivo `index.html` para abrir o projeto no seu navegador.
+- **Link para abrir online:** Você também pode acessar o site atráves desse link: https://puga07.github.io/Airsoft-World-Express/
 
 # Principais funcionalidades
 - **Produtos em estoque:** Exibição do estoque de equipamentos, como armas, coletes e munições e seus respectivos preços.
