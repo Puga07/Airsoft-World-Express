@@ -44,7 +44,7 @@ function abrirGunsmith(idArma) {
     
     if (idArma === 'm4a1') {
         titulo.innerText = "Rifle M4A1";
-        imagem.src = "./img/m4a1.png";
+        imagem.src = "m4a1.png";
         desc.innerHTML = "<strong>Informações do Equipamento:</strong><br><br>O clássico Rifle M4A1 em sua versão AEG de alto desempenho. Possui corpo em polímero de alta densidade, gearbox de metal V2 e sistema de hop-up ajustável.";
         
         precoBase = 1500.00;
@@ -59,7 +59,7 @@ function abrirGunsmith(idArma) {
 
     } else if (idArma === 'g17') {
         titulo.innerText = "Pistola Glock G17";
-        imagem.src = "./img/glock.jpg";
+        imagem.src = "glock.jpg";
         desc.innerHTML = "<strong>Informações do Equipamento:</strong><br><br>Pistola com sistema Blowback a Green Gas. Possui slide em metal e corpo em polímero, garantindo realismo no recuo e excelente durabilidade em combates confinados (CQB).";
         
         precoBase = 850.00;
@@ -74,7 +74,7 @@ function abrirGunsmith(idArma) {
 
     } else if (idArma === 'L96') {
         titulo.innerText = "Sniper L96";
-        imagem.src = "./img/sniper_L96.png";
+        imagem.src = "sniper_L96.png";
         desc.innerHTML = "<strong>Informações do Equipamento:</strong><br><br>Rifle de precisão com ação por mola (Spring Bolt Action). Possui cano longo de precisão, corpo em polímero reforçado e trilho superior para acoplagem de lunetas. Ideal para atiradores de elite.";
         
         precoBase = 2500.00;
