@@ -1,6 +1,6 @@
 # Airsoft-World-Express
 
-# Objetivo do site:
+## Objetivo do site:
 - Modelo base do site com as informações das armas do catálogo em estoque para poder ter uma ideia do modelo e funcionamento do site
 
 # Participantes:
